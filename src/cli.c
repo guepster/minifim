@@ -1,6 +1,7 @@
 #include "../include/minifim.h"
 
-void cli(void){
+void cli(void)
+{
     printf("Usage: minifim <command> [args]\n");
     printf("Commands:\n");
     printf(" init\t\t\t\tcreate the baseline\n");

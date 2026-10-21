@@ -1,3 +1,5 @@
+#<<<<<<<<<<<<<< included >>>>>>>>>>>>
+
 #sys bin
 /bin/
 /sbin/
@@ -60,3 +62,25 @@
 
 #name resolv
 /etc/hosts
+
+#<<<<<<<<<<< exclude >>>>>>>>>
+
+#virtual filesys gen by the kernel
+!/proc/
+!/sys/
+!/dev/
+!/run/
+
+#tmp files
+!/tmp/
+!/var/tmp/
+
+#log
+!/var/log/
+
+!/etc/mtab
+!/etc/adjtime
+
+!/etc/ld.so.cache
+
+!/etc/resolv.conf
