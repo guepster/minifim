@@ -40,6 +40,7 @@ struct llist
     struct fim_entry *head;
 };
 
+size_t my_strlen(const char *a);
 int strdiff(const char *a, const char *b);
 int config_load(const char *filename, struct fim_config *config);
 void config_free(struct fim_config *config);
