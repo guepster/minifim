@@ -8,6 +8,10 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <dirent.h>
 
 struct fim_entry
 {
@@ -19,6 +23,12 @@ struct fim_entry
     unsigned int grp;
     int64_t modif_time;
     struct fim_entry *next;
+};
+
+struct llist
+{
+    size_t llist_size;
+    struct fim_entry *head;
 };
 
 struct conf_path
@@ -34,12 +44,7 @@ struct fim_config
     struct conf_path *head;
 };
 
-struct llist
-{
-    size_t llist_size;
-    struct fim_entry *head;
-};
-
+struct fim_entry push_entries(path, entry, s);
 size_t my_strlen(const char *a);
 int strdiff(const char *a, const char *b);
 int config_load(const char *filename, struct fim_config *config);
